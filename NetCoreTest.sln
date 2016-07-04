@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{993EA901-46F6-47F1-B1DB-80605B979527}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{951EAE48-24D4-4A42-AC11-33FB78E4BF0B}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCoreTest", "src\NetCoreTest\NetCoreTest.xproj", "{FDD7A177-CC5D-483E-AE09-425BCDE27C78}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCore.Data", "src\NetCore.Data\NetCore.Data.xproj", "{8B1B9C25-2983-488D-B9BC-EFF99F169AA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDD7A177-CC5D-483E-AE09-425BCDE27C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD7A177-CC5D-483E-AE09-425BCDE27C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD7A177-CC5D-483E-AE09-425BCDE27C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD7A177-CC5D-483E-AE09-425BCDE27C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B1B9C25-2983-488D-B9BC-EFF99F169AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1B9C25-2983-488D-B9BC-EFF99F169AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1B9C25-2983-488D-B9BC-EFF99F169AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1B9C25-2983-488D-B9BC-EFF99F169AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FDD7A177-CC5D-483E-AE09-425BCDE27C78} = {993EA901-46F6-47F1-B1DB-80605B979527}
+		{8B1B9C25-2983-488D-B9BC-EFF99F169AA3} = {993EA901-46F6-47F1-B1DB-80605B979527}
+	EndGlobalSection
+EndGlobal
