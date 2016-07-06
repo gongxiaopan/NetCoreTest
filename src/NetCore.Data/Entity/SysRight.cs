@@ -19,12 +19,12 @@ namespace NetCore.Data.Entity
         /// <summary>
         /// 权限名称
         /// </summary>
-        [MaxLength(20)]
+        [MaxLength(50)]
         public string RightName { get; set; }
         /// <summary>
         /// 权限显示名称
         /// </summary>
-        [MaxLength(20)]
+        [MaxLength(50)]
         public string DisplayName { get; set; }
         /// <summary>
         /// 父id
@@ -49,7 +49,7 @@ namespace NetCore.Data.Entity
         /// </summary>
         [MaxLength(200)]
         public string MenuUrl { get; set; }
-        [MaxLength(10)]
+        [MaxLength(50)]
         public string SubSystem { get; set; }
         /// <summary>
         /// 按钮操作

@@ -23,7 +23,7 @@ namespace NetCore.Data.Entity
         /// 用户账号
         /// </summary>
         [MaxLength(100)]
-        public string UserNo { get; set; }
+        public string Employee { get; set; }
         /// <summary>
         /// 用户名
         /// </summary>
@@ -35,36 +35,62 @@ namespace NetCore.Data.Entity
         [MaxLength(50)]
         public string Password { get; set; }
         /// <summary>
-        /// 用户类型 
-        /// </summary>
-        [MaxLength(50)]
-        public string UserType { get; set; }
-        /// <summary>
-        /// 地址 
-        /// </summary>
-        [MaxLength(250)]
-        public string Address { get; set; }
-        /// <summary>
         /// 组织
         /// </summary>
         [MaxLength(50)]
         public string OrgId { get; set; }
+        /// <summary>
+        /// 客户域
+        /// </summary>
+        [MaxLength(50)]
+        public string CustomerId { get; set; }
+        /// <summary>
+        /// 用户名拼音 
+        /// </summary>
+        [MaxLength(250)]
+        public string PinYin { get; set; }
+        [MaxLength(50)]
+        [RegularExpression(@"((\d{3,4})|\d{3,4}-)?(\d{3,13})(-(\d{1,4}))?",ErrorMessage ="工作电话格式不正确")]
+        public string WorkPhone { get; set; }
+        /// <summary>
+        /// 手机号
+        /// </summary>
+        [MaxLength(100)]
+        [RegularExpression(@"((\d{3,4})|\d{3,4}-)?(\d{3,13})(-(\d{1,4}))?", ErrorMessage = "手机号码格式不正确")]
+        public string TelePhone { get; set; }
+        /// <summary>
+        /// 短号
+        /// </summary>
+        public string ShortMobile { get; set; }
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        [MaxLength(100)]
+        public string Email { get; set; }
+        /// <summary>
+        /// 家庭地址 
+        /// </summary>
+        [MaxLength(250)]
+        public string Address { get; set; }
+        /// <summary>
+        /// 生日
+        /// </summary>
+        public Nullable<System.DateTime> BirthdayDate { get; set; }
+        /// <summary>
+        /// 1:男 0:女
+        /// </summary>
+        [DefaultValue(0)]
+        public Nullable<int> Sex { get; set; }
         /// <summary>
         /// 岗位
         /// </summary>
         [MaxLength(50)]
         public string PositionId { get; set; }
         /// <summary>
-        /// 手机号
+        /// 是否超级管理员
         /// </summary>
-        [MaxLength(100)]
-        [RegularExpression(@"((\d{3,4})|\d{3,4}-)?(\d{3,13})(-(\d{1,4}))?", ErrorMessage ="手机号码格式不正确")]
-        public string TelePhone { get; set; }
-        /// <summary>
-        /// 邮箱
-        /// </summary>
-        [MaxLength(100)]
-        public string Email { get; set; }
+        [DefaultValue(0)]
+        public Nullable<int> IsSuper { get; set; }
         /// <summary>
         /// 排序
         /// </summary>
@@ -81,11 +107,7 @@ namespace NetCore.Data.Entity
         /// </summary>
         [DefaultValue(0)]
         public Nullable<int> IsDel { get; set; }
-        /// <summary>
-        /// 客户域
-        /// </summary>
-        [MaxLength(50)]
-        public string CustomerId { get; set; }
+        
         [MaxLength(50)]
         public string AddBy { get; set; }
         public Nullable<System.DateTime> AddDate { get; set; }
@@ -105,6 +127,5 @@ namespace NetCore.Data.Entity
         public virtual ICollection<SysUserOrganization> SysUserOrganization { get; set; }
         public virtual ICollection<LoginSession> LoginSession { get; set; }
         #endregion
-
     }
 }

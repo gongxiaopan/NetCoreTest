@@ -27,21 +27,20 @@ namespace NetCore.Data.Entity
         [MaxLength(100)]
         [Required(AllowEmptyStrings = false,ErrorMessage ="组织名称不能为空")]
         public string OrgName { get; set; }
-
         [MaxLength(20)]
         public string OrgCode { get; set; }
-
-        public Nullable<int> OrgType { get; set; }
-
         /// <summary>
         /// 客户组织等级
         /// </summary>
         public Nullable<int> OrgLevel { get; set; }
-
         /// <summary>
         /// 系统组织等级
         /// </summary>
         public Nullable<int> SysOrgLevel { get; set; }
+        [MaxLength(1000)]
+        public string OrgParentPath { get; set; }
+        [MaxLength(4000)]
+        public string OrgNamePath { get; set; }
         [DefaultValue(0)]
         [RegularExpression(@"[0-9]+", ErrorMessage ="排序号必须为数字")]
         public Nullable<int> SortNo { get; set; }
@@ -54,7 +53,6 @@ namespace NetCore.Data.Entity
         public Nullable<System.DateTime> AddDate { get; set; }
         [MaxLength(50)]
         public string UpdateBy { get; set; }
-
         public Nullable<System.DateTime> UpdateDate { get; set; }
 
         [ForeignKey("ParentId")]
