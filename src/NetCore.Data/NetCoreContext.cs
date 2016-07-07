@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NetCore.Data
 {
-    public class NetCoreContext : IdentityDbContext<BaseEntity>
+    public class NetCoreContext :DbContext
     {
         public NetCoreContext(DbContextOptions<NetCoreContext> options)
             : base(options)

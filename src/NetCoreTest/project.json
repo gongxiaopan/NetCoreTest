@@ -23,8 +23,8 @@
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "Microsoft.EntityFrameworkCore": "1.0.0",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
-    "NetCore.Data": "1.0.0-*"
-  },
+    "NetCore.Data": "1.0.0-*",
+    "Microsoft.Extensions.Caching.Memory": "1.0.0"  },
 
   "tools": {
     "BundlerMinifier.Core": "2.0.238",

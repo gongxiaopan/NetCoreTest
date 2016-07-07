@@ -13,12 +13,9 @@ namespace NetCore.Data.Entity
         public string UserId { get; set; }
         [MaxLength(50)]
         public string OrganizationId { get; set; }
-        /// <summary>
-        /// 权限类型：manage：后台管辖权限范围，view：下发权限范围
-        /// </summary>
-        [MaxLength(20)]
-        public string VMLimitType { get; set; }
-
+        [MaxLength(50)]
+        public string AddBy { get; set; }
+        public Nullable<System.DateTime> AddDate { get; set; }
         [MaxLength(50)]
         public string UpdateBy { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
