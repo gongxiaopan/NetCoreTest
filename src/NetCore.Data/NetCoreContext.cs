@@ -34,13 +34,13 @@ namespace NetCore.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Customers>().ToTable("Customers");
-            modelBuilder.Entity<SysOrganization>().ToTable("SysOrganization");
             modelBuilder.Entity<SysUser>().ToTable("SysUser");
-            modelBuilder.Entity<SysUserOrganization>().ToTable("SysUserOrganization");
-            modelBuilder.Entity<SysRole>().ToTable("SysRole");
-            modelBuilder.Entity<SysRoleRight>().ToTable("SysRoleRight");
-            modelBuilder.Entity<SysRoleUser>().ToTable("SysRoleUser");
             modelBuilder.Entity<SysRight>().ToTable("SysRight");
+            modelBuilder.Entity<SysOrganization>().ToTable("SysOrganization");
+            modelBuilder.Entity<SysRole>().ToTable("SysRole");
+            modelBuilder.Entity<SysUserOrganization>().ToTable("SysUserOrganization");            
+            modelBuilder.Entity<SysRoleRight>().ToTable("SysRoleRight");
+            modelBuilder.Entity<SysRoleUser>().ToTable("SysRoleUser");            
             modelBuilder.Entity<LoginSession>().ToTable("LoginSession");
         }
     }

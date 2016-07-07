@@ -47,6 +47,14 @@ namespace NetCoreTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<NetCoreContext>(options => options.UseSqlServer(Configuration["Data:MSSqlConnection:ConnectionString"]));
+            services.AddIdentity<BaseEntity, IdentityRole>(options =>
+            {
+                options.Password = new PasswordOptions()
+                {
+                    RequireNonAlphanumeric = false,
+                    RequireUppercase = false
+                };
+            }).AddEntityFrameworkStores<NetCoreContext>().AddDefaultTokenProviders();
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
