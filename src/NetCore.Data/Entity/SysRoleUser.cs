@@ -13,17 +13,17 @@ namespace NetCore.Data.Entity
         [MaxLength(36)]
         public string ID { get; set; }
         [MaxLength(36)]
-        public string RoleId { get; set; }
+        public string RoleCode { get; set; }
         [MaxLength(50)]
-        public string UserId { get; set; }
+        public string UserCode { get; set; }
 
         [MaxLength(50)]
         public string UpdateBy { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
 
-        [ForeignKey("RoleId")]
+        [ForeignKey("RoleCode")]
         public virtual SysRole SysRole { get; set; }
-        [ForeignKey("UserId")]
+        [ForeignKey("UserCode")]
         public virtual SysUser SysUser { get; set; }
     }
 }
